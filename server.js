@@ -25,6 +25,10 @@ app.use("/api/files", files);
 app.use("/files", show);
 app.use("/files/download", download);
 
+app.get("/", (req,res) => {
+  res.status(200).send("Hello World")
+})
+
 app.listen(PORT, () => {
   console.log("Server Connected http://localhost:3000/");
 });
